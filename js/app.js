@@ -4,6 +4,7 @@ const loadDynamicScript = (url,callback) => {
   const existingScript = document.getElementById('scriptId');
 
   if (!existingScript) {
+    console.log('new script');
     const script = document.createElement('script');
     script.src = url; // URL for the third-party library being loaded.
     script.id = 'libraryName' + new Date(); // e.g., googleMaps or stripe
